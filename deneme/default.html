@@ -4,7 +4,9 @@
 <script src="jquery.jeditable.js"></script>
 <script type="text/javascript" charset="utf-8">
 $(function() {
- $(".duzenlenebilir").editable("kaydet.php", {
+ $('.secenek_duzenle').live('click',function(event) {
+ event.preventDefault();
+ $(this).editable('kaydet.php');
  indicator : "İşleminiz Yapılıyor...",
  type : 'text',
  onblur : 'submit',
