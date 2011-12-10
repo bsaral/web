@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" debug="true">
+
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Jeditable Edit In Place Demo</title>
-<meta name="generator" content="Mephisto" />
 <link href="http://www.appelsiini.net/stylesheets/main2.css" rel="stylesheet" type="text/css" />
 <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/tuupola" title="Atom feed" />
 <script src="/mint/?js" type="text/javascript"></script>
@@ -101,42 +99,17 @@ $(function() {
 </head>
 
 <body>
-  <div id="wrap"> 
-    <div id="header">
-      <p>
-        <h1>Jeditable</h1><br />
-        <small>Edit in place plugin for jQuery.</small>
-        <ul id="nav">
-          <li id="first"><a href="/" class="active">weblog</a></li>
-          <li><a href="/projects" class="last">projects</a></li>
-          <!--
-          <li><a href="/cv" class="last">cv</a></li>
-        -->
-        </ul>
-      </p>
-    </div>
+ 
     <div id="content">
       
     <div class="entry">
             
-    <p>You might also want to check <a href="custom.html">custom inputs demo</a>.
 
     <h2>Normal textarea</h2>
     
     <p class="editable_textarea" id="paragraph_1"><?php echo file_get_contents('http://www.appelsiini.net/projects/jeditable/php/load.php?id=paragraph_1') ?></p>
 
-    <h2>Inlined select</h2>
-    <p><b class="editable_select" id="select_1" style="display: inline"> <?php echo file_get_contents('http://www.appelsiini.net/projects/jeditable/php/load.php?id=select_1') ?></b> dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh <b class="editable_select_json" id="select_2" style="display: inline"> <?php print file_get_contents("http://bsaral.github.com/web/deneme/php/load.php?id=select_2") ?></b> euismod tincidunt ut laoreet dolore magna aliquam erat volutp</p>    
-
-    <h2>Textile renderer</h2>
-    <div class="editable_textile" id="paragraph_2"><?php echo file_get_contents('http://www.appelsiini.net/projects/jeditable/php/load.php?id=paragraph_2&renderer=textile') ?></div>
-
-    <h2>Different events</h2>
-    <p>
-      <b class="click" style="display: inline">Click me if you dare!</b></> or maybe you should 
-      <b class="dblclick" style="display: inline">doubleclick</b> instead? Really lazy people can just
-      <b class="mouseover" style="display: inline">mouseover me</b>...
-    </p>
+    
     
     </div>
     <div id="sidebar">
