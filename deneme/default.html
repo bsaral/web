@@ -21,7 +21,7 @@ $url    = sprintf('http://bsaral.github.com/web/deneme/php/', $_SERVER['SERVER_N
 
 $(function() {
         
-  $(".editable_select").editable("<?php print $url ?>save.php", { 
+  $(".editable_select").editable("http://bsaral.github.com/web/deneme/php/save.php", { 
     indicator : '<img src="img/indicator.gif">',
     data   : "{'Lorem ipsum':'Lorem ipsum','Ipsum dolor':'Ipsum dolor','Dolor sit':'Dolor sit'}",
     type   : "select",
@@ -31,14 +31,14 @@ $(function() {
       return {id : 2};
     }
   });
-  $(".editable_select_json").editable("<?php print $url ?>save.php", { 
+  $(".editable_select_json").editable("http://bsaral.github.com/web/deneme/php/save.php", { 
     indicator : '<img src="img/indicator.gif">',
     loadurl : "<?php print $url ?>json.php",
     type   : "select",
     submit : "OK",
     style  : "inherit"
   });
-  $(".editable_textarea").editable("<?php print $url ?>save.php", { 
+  $(".editable_textarea").editable("http://bsaral.github.com/web/deneme/php/save.php", { 
       indicator : "<img src='img/indicator.gif'>",
       type   : 'textarea',
       submitdata: { _method: "put" },
@@ -47,7 +47,7 @@ $(function() {
       cancel : 'cancel',
       cssclass : "editable"
   });
-  $(".editable_textile").editable("<?php print $url ?>save.php?renderer=textile", { 
+  $(".editable_textile").editable("http://bsaral.github.com/web/deneme/php/save.php?renderer=textile", { 
       indicator : "<img src='img/indicator.gif'>",
       loadurl   : "<?php print $url ?>load.php",
       type      : "textarea",
@@ -56,18 +56,18 @@ $(function() {
       tooltip   : "Click to edit..."
   });
   
-  $(".click").editable("<?php print $url ?>echo.php", { 
+  $(".click").editable("http://bsaral.github.com/web/deneme/php/echo.php", { 
       indicator : "<img src='img/indicator.gif'>",
       tooltip   : "Click to edit...",
       style  : "inherit"
   });
-  $(".dblclick").editable("<?php print $url ?>echo.php", { 
+  $(".dblclick").editable("http://bsaral.github.com/web/deneme/php/echo.php", { 
       indicator : "<img src='img/indicator.gif'>",
       tooltip   : "Doubleclick to edit...",
       event     : "dblclick",
       style  : "inherit"
   });
-  $(".mouseover").editable("<?php print $url ?>echo.php", { 
+  $(".mouseover").editable("http://bsaral.github.com/web/deneme/echo.php", { 
       indicator : "<img src='img/indicator.gif'>",
       tooltip   : "Move mouseover to edit...",
       event     : "mouseover",
@@ -75,7 +75,7 @@ $(function() {
   });
   
   /* Should not cause error. */
-  $("#nosuch").editable("<?php print $url ?>echo.php", { 
+  $("#nosuch").editable("http://bsaral.github.com/web/deneme/echo.php", { 
       indicator : "<img src='img/indicator.gif'>",
       type   : 'textarea',
       submit : 'OK'
