@@ -242,7 +242,7 @@ http://github.com/necolas/css3-github-buttons
 .button.user.icon:active:before { background-position: -12px -360px; }
 
 
-/* background: url(icons1.png)    için düzenlenen bölüm */
+/* background: url(icons1.png)    için düzenlenen bölüm  NEW CSS3 GITHUB BUTTONS*/
 
 .button.icon1:before {
     content: "";
@@ -256,11 +256,30 @@ http://github.com/necolas/css3-github-buttons
     
 	
 }
+.button.arrowup.icon1:before { background-position: -4.35in -2.34in; }
+.button.arrowup.icon1:hover:before,
+.button.arrowup.icon1:focus:before,
+.button.arrowup.icon1:active:before { background-position: -4.35in -2.34in; }
 
-.button.dal.icon1:before { background-position: -1.0in -3.7in; }
+.button.arrowdown.icon1:before { background-position: -4in -2.34in; }
+.button.arrowdown.icon1:hover:before,
+.button.arrowdown.icon1:focus:before,
+.button.arrowdown.icon1:active:before { background-position: -4in -2.34in; }
+
+.button.approve.icon1:before { background-position: -2.34in -3.67in; }
+.button.approve.icon1:hover:before,
+.button.approve.icon1:focus:before,
+.button.approve.icon1:active:before { background-position: -2.34in -3.67in; }
+
+.button.remove.icon1:before { background-position: -0.67in -12.7in; }
+.button.remove.icon1:hover:before,
+.button.remove.icon1:focus:before,
+.button.remove.icon1:active:before { background-position: -0.67in -12.7in; }
+
+.button.dal.icon1:before { background-position: -0.67in -8.34in; }
 .button.dal.icon1:hover:before,
 .button.dal.icon1:focus:before,
-.button.dal.icon1:active:before { background-position: -1.0in -3.7in; }
+.button.dal.icon1:active:before { background-position: -0.67in -8.34in; }
 
 .button.ilac.icon1:before {  background-position: -2.67in -9.68in; }
 .button.ilac.icon1:hover:before,
@@ -282,6 +301,40 @@ http://github.com/necolas/css3-github-buttons
 .button.rapor.icon1:focus:before,
 .button.rapor.icon1:active:before { background-position: -2.68in -4.35in;}
 
+.button.bag.icon1:before {  background-position: -3in -8.34in; }
+.button.bag.icon1:hover:before,
+.button.bag.icon1:focus:before,
+.button.bag.icon1:active:before { background-position: -3in -8.34in;}
+
+.button.dugum.icon1:before {  background-position: -1.67in -7.67in; }
+.button.dugum.icon1:hover:before,
+.button.dugum.icon1:focus:before,
+.button.dugum.icon1:active:before { background-position: -1.67in -7.67in;}
+
+.button.ciz.icon1:before {  background-position: -3.67in 0in; }
+.button.ciz.icon1:hover:before,
+.button.ciz.icon1:focus:before,
+.button.ciz.icon1:active:before { background-position: -3.67in 0in;}
+
+.button.baslat.icon1:before {  background-position: -1in -11.7in; }
+.button.baslat.icon1:hover:before,
+.button.baslat.icon1:focus:before,
+.button.baslat.icon1:active:before { background-position: -1in -11.7in;}
+
+.button.test.icon1:before {  background-position: -1.34in -1.34in; }
+.button.test.icon1:hover:before,
+.button.test.icon1:focus:before,
+.button.test.icon1:active:before { background-position: -1.34in -1.34in;}
+
+.button.trash.icon1:before { background-position: -1in 0in; }
+.button.trash.icon1:hover:before,
+.button.trash.icon1:focus:before,
+.button.trash.icon1:active:before { background-position: -1in 0in; }
+
+.button.user.icon1:before { background-position: -2in -4in; }
+.button.user.icon1:hover:before,
+.button.user.icon1:focus:before,
+.button.user.icon1:active:before { background-position: -2in -4in; }
 
 /* ------------------------------------------------------------------------------------------------------------- BUTTON EXTENSIONS */
 
