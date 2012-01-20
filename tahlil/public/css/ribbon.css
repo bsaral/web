@@ -1,0 +1,24 @@
+#ribbon{
+	background-color: #3072b3;
+	overflow:hidden;
+	position:absolute;
+	left:-3em;
+	top:2.5em;
+	/*height:30px;*/
+	-moz-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	/*-moz-box-shadow:0 0 2px #3072b3;*/
+	/*-webkit-box-shadow:0 0 2px #3072b3;*/
+}
+
+#ribbon a {
+	/*border: 1px solid #3072b3;*/
+	color:#fff;
+	display:block;
+	font: bold 13px 'Helvetiva Neue',Helvetica,Arial,sans-serif;
+	padding:8px 49px 9px;
+	text-align:center;
+	text-decoration:none;
+	text-shadow:0 0 .7em #444;
+	width:60px;
+}
