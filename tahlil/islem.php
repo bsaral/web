@@ -7,16 +7,16 @@ if(isset($_POST['sil'])) // Eğer butona basıldıysa
 {
   if(isset($_POST['tahlil'])) // Eğer seçeneklerden en az biri işaretlenmişse
   {
-    $dizi = $_POST['tahlil']; // Post ile gelen seçenekler diziye aktarılır.
-    foreach($dizi as $tahlil) // dizinin her elemanı için tekrar eden döngü
+    $dizi = $_POST['tahlil']; 
+    foreach($dizi as $tahlil) 
     {
-      mysql_query("delete from survey where id = '$tahlil'") or die ("silinmedi"); // MySQL'dan işbu veriyi silme
+      mysql_query("delete from survey where id = '$tahlil'") or die ("silinmedi"); 
     }
   }
   else // eğer hiçbir checkbox işaretlenmemişse
   {
-    echo "Birşey seçmediniz!"; // ekrana bu yazılır.
+    echo "Birşey seçmediniz!"; 
   }
 }
- header("Location: index.php");// işlem tamamlandığında arayuz.php sayfasına döner
+ header("Location: index.php");// işlem tamamlandığında index.php sayfasına döner
 ?>
