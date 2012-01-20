@@ -18,5 +18,5 @@ if(isset($_POST['sil'])) // Eğer butona basıldıysa
     echo "Birşey seçmediniz!"; // ekrana bu yazılır.
   }
 }
- header("Location: index.php");// işlem tamamlandığında arayuz.php sayfasına döner
+ header("Location: index.html");// işlem tamamlandığında arayuz.php sayfasına döner
 ?>
