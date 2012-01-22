@@ -11,10 +11,11 @@
     <link rel="shortcut icon" href="/public/img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/public/css/jquery-ui-1.7.1.custom.css" />
+    
 
     <!-- neredeyse tüm uygulamalar -->
     <script type="text/javascript" src="/public/js/jquery.js"></script>
-
+    
     <!-- facebox -->
     <script type="text/javascript" src="/public/js/facebox.js"></script>
     <script type="text/javascript">
@@ -102,7 +103,7 @@
 	<div id='sekme-1'>
 		<div id='tabs-1'>
 			<ul>
-				<li><a href='#sekme-101'>Direkt Radyografi</a></li>
+				<li><a href='#sekme-101' >Direkt Radyografi</a></li>
 				<li><a href='#sekme-102'>MR</a></li>
 				<li><a href='#sekme-103'>BT</a></li>
 				<li><a href='#sekme-104'>Ultrasonografi</a></li>
@@ -111,10 +112,11 @@
 
 			<div id='sekme-101'>
 			<table id='box-table-b'>
-				 <input  align="right" value="submit" type= "image" src="img/add.png" name="ekle" />
+				
+				 <input  type="text" name="yaz">
+				 <input  type="submit" value="Ekle" name="ekle">
+				 <input align="left"  type= "image" src="img/add.png" />
 				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil"/>
-
-				 <tr>
 				 
 				<?php
 				$say=-1;
@@ -127,7 +129,7 @@
 						$say=$say+1;
 						
 						
-						if ($id[3]==1 && $id[1]!=2){
+						if ($id[3]==1 && $id[1]!=2 || $id[3]==0 ){
 							
 							if($say==3){
 								echo '<tr><td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>';
@@ -151,22 +153,24 @@
 			</div>
 			<div id='sekme-102'>
 				<table id='box-table-b'>
-				<input align="right" value="submit" type= "image" src="img/add.png" name="ekle" />
-				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil"/>
+				<input  type="text" name="yaz1">
+				 <input  type="submit" value="Ekle" name="ekle1">
+				 <input align="left"  type= "image" src="img/add.png" />
+				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil1"/>
 				 <?php
-				$say=0;
+				$say1=-1;
 				$sql=mysql_query("select * from survey");
 				 while($dizi = mysql_fetch_array($sql)) // Tablodan gelen her satır için bir liste elemanı
 					{
 					
 						$id = $dizi['id'];
 						$isim = $dizi['name'];
-						$say=$say+1;
+						$say1=$say1+1;
 						if ($id[3]==2){
 							
-							if($say%3==0){
+							if($say1%3==0){
 								echo '<tr><td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim . '</td>'; 
-								$say=0;
+								$say1=0;
 							}
 						else
 							echo '<td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>'; 
@@ -180,8 +184,10 @@
 			</div>
 			<div id='sekme-103'>
 				<table id='box-table-b'>
-				<input align="right" value="submit" type= "image" src="img/add.png" name="ekle" />
-				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil"/>
+				<input  type="text" name="yaz2">
+				 <input  type="submit" value="Ekle" name="ekle2">
+				 <input align="left"  type= "image" src="img/add.png" />
+				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil2"/>
 				 
 				<?php
 				$say=-1;
@@ -209,8 +215,10 @@
 			</div>
 			<div id='sekme-104'>
 				<table id='box-table-b'>
-				<input align="right" value="submit" type= "image" src="img/add.png" name="ekle" />
-				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil"/>
+				<input  type="text" name="yaz3">
+				 <input  type="submit" value="Ekle" name="ekle3">
+				 <input align="left"  type= "image" src="img/add.png" />
+				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil3"/>
 				 
 				<?php
 				$say=0;
@@ -238,8 +246,10 @@
 			</div>
 			<div id='sekme-105'>
 				<table id='box-table-b'>
-				<input align="right" value="submit" type= "image" src="img/add.png" name="ekle" />
-				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil"/>
+				<input  type="text" name="yaz4">
+				 <input  type="submit" value="Ekle" name="ekle4">
+				 <input align="left"  type= "image" src="img/add.png" />
+				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil4"/>
 				
 				 <?php
 				$say=1;
@@ -283,8 +293,10 @@
 
 			<div id='sekme-201'>
 				<table id='box-table-b'>
-				<input align="right" value="submit" type= "image" src="img/add.png" name="ekle" />
-				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil"/>
+				<input  type="text" name="yaz5">
+				 <input  type="submit" value="Ekle" name="ekle5">
+				 <input align="left"  type= "image" src="img/add.png" />
+				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil5"/>
 				 
 				 <tr>
 					<td><input type='checkbox' value='20101' name='tahlil[]' >foo</td>
