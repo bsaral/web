@@ -1,0 +1,29 @@
+#products {width:400px;float:left;margin-right:5px;}
+#products .slides_container {width:400px;overflow:hidden;float:left;position:relative;border:1px solid #dfdfdf;display:none;}
+.slides_container a {width:400px;height:275px;display:block;}
+.slides_container a img {width:400px;height:274px;}
+#products .next, #products .prev {position:absolute;top:338px;width:21px;height:0;padding-top:21px;overflow:hidden;display:block;
+	z-index:101;}
+#products .prev {background:url(../img/ekg/arrow-prev.png);}
+#products .next {left:405px;background:url(../img/ekg/arrow-next.png);}
+#products .pagination {width:420px;padding-left:0;float:left}
+#products .pagination li {float:left;margin-left:2px;list-style:none;margin-right:4px;}
+#products .pagination li a {display:block;width:50px;height:37px;float:left;	background:#f9f9f9;border: 1px solid #ddd;}
+#products .pagination li.current a {border:1px solid #7f7f7f;margin:0;}
+#products .pagination li a img { width:50px; height:37px;}
+#products .slides_container a img {width:400px;}
+
+.ekg-story {float:left;width:490px; height:130px;background:#fff;border:1px solid #ddd;margin-bottom:3px;padding:4px 7px;
+    border: 1px solid #ddd; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;}
+
+form.ekg {height:330px;}
+form.ekg textarea {float:left;width:492px; height:144px; background:#fff;border:1px solid #ddd;}
+form.ekg .yorum {float:left;width:492px; height:60px; background:#fff;border:1px solid #ddd;}
+form.ekg .beklenen {float:left;width:492px; height:57px; background:#B8DE7A;border:1px solid #ccc;}
+form.ekg .ekg-button {float:left;margin-top:20px;}
+form.ekg span.title {float:left;padding:1px 0;font-weight:bold; color:#2f7ca2;/*color:#ff5c00;*/
+				padding-left:20px;background:url(/public/img/icon/16x16/next_blue.png) no-repeat;}
+form.ekg span.title_beklenen {float:left;padding:1px 0;font-weight:bold; color:#4D7310;
+				padding-left:20px;background:url(/public/img/icon/16x16/next_green.png) no-repeat;}
+
+
