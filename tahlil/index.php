@@ -9,38 +9,33 @@
   <head>
     <meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
     <link rel="shortcut icon" href="/public/img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/public/css/jquery-ui-1.7.1.custom.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/jquery-ui-1.7.1.custom.css" />
+    <link href="public/css/editableText.css" rel="stylesheet" type="text/css">	
+   
+    
     
 
     <!-- neredeyse tüm uygulamalar -->
-    <script type="text/javascript" src="/public/js/jquery.js"></script>
-    
-    <!-- facebox -->
-    <script type="text/javascript" src="/public/js/facebox.js"></script>
+    <script type="text/javascript" src="public/js/jquery.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>	
+    <script src="public/js/jquery.editableText.js" type="text/javascript"></script>	
     <script type="text/javascript">
-      jQuery(document).ready(function($) {
-        $('a[rel*=facebox]').facebox();
-      })
-    </script>
+		jQuery(function($){
+            $('.editableText').editableText("guncelle.php",{
+				newlinesEnabled: false
+			});
+		});
+		
 
-    <!-- doz alımı -->
-    <script type="text/javascript" src="/public/js/jquery.tools.min.js"></script>
+	</script>
+   
     <!-- accordion & tetkik ve tüm ui'ler için -->
     <script type="text/javascript" src="/public/js/jquery-ui.min.js"></script>
-    <!-- multiselect tahlil penceresi -->
-    <script type="text/javascript" src="/public/js/jquery.multiselect.js"></script>
-    <!-- tooltip » vtip -->
-    <script type="text/javascript" src="/public/js/vtip.js"></script>
-
-    <!-- form validate -->
-    <script type="text/javascript" src="/public/js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="/public/js/messages_tr.js"></script>
     
+   
 
-    
-
-    <title>TAHLİL</title>
+   <title>TAHLİL</title>
   </head>
 
  
@@ -77,11 +72,11 @@
 	      </div>
 
       <!-- sayfayı içe aktaralım -->
-      <h2>
+      <h2 >
   <!--div id="time"></div-->
   Tahlil  </h2>
 
-<p>Hastanın gelen ambulans ile tam teşekkülü devlet hastanesi acil servisine sevki gerçekleşmiştir. Ambulans gelene kadar bol ılık su ile vücudu yıkanmış ve üzerine temiz bir çarşaf örtülmüştür. Tarım ilacı ile kontaminasyon şüphesi olan elbiseleri imha/analiz edilmek üzere tehlikeli tıbbi atık çöpüne atılmıştır.::</p>
+<p >Hastanın gelen ambulans ile tam teşekkülü devlet hastanesi acil servisine sevki gerçekleşmiştir. Ambulans gelene kadar bol ılık su ile vücudu yıkanmış ve üzerine temiz bir çarşaf örtülmüştür. Tarım ilacı ile kontaminasyon şüphesi olan elbiseleri imha/analiz edilmek üzere tehlikeli tıbbi atık çöpüne atılmıştır.::</p>
 
 
 <p class="question">Acil serviste bu hastaya yönelik olarak hangi tetkikleri istersiniz?</p>
@@ -111,12 +106,13 @@
 			</ul>
 
 			<div id='sekme-101'>
-			<table id='box-table-b'>
+			<table id='box-table-b' >
 				
 				 <input  type="text" name="yaz">
 				 <input  type="submit" value="Ekle" name="ekle">
 				 <input align="left"  type= "image" src="img/add.png" />
 				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil"/>
+				  
 				 
 				<?php
 				$say=-1;
@@ -132,7 +128,9 @@
 						if ($id[3]==1 && $id[1]!=2 || $id[3]==0 ){
 							
 							if($say==3){
-								echo '<tr><td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>';
+								echo '<tr ><td class="editableText" >'.'<input   name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>';
+								
+								
 								 
 								
 								$say=0;
@@ -140,7 +138,8 @@
 							
 							else{
 							
-						echo '<td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>';} 
+						echo '<td class="editableText">'.'<input  name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" />'. $isim .'</td>';
+						}
 					}
 					
 					
@@ -169,11 +168,11 @@
 						if ($id[3]==2){
 							
 							if($say1%3==0){
-								echo '<tr><td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim . '</td>'; 
+								echo '<tr><td>'.'<input type="image" value="Submit" src="img/edit.png"   name="edit"/">'.'<input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim . '</td>'; 
 								$say1=0;
 							}
 						else
-							echo '<td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>'; 
+							echo '<td>'.'<input type="image" value="Submit" src="img/edit.png"   name="edit"/">'.'<input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>'; 
 					}
 				  
 				}
@@ -201,11 +200,11 @@
 						if ($id[3]==3){
 							
 							if($say%3==0){
-								echo '<tr><td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim . '</td>'; 
+								echo '<tr><td>'.'<input type="image" value="Submit" src="img/edit.png"   name="edit"/">'.'<input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim . '</td>'; 
 								$say=0;
 							}
 						else
-							echo '<td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>'; 
+							echo '<td>'.'<input type="image" value="Submit" src="img/edit.png"   name="edit"/">'.'<input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>'; 
 					}
 				  
 				}
@@ -220,6 +219,7 @@
 				 <input align="left"  type= "image" src="img/add.png" />
 				 <input type="image" value="Submit" src="img/delete.png"  align="right" name="sil3"/>
 				 
+				 
 				<?php
 				$say=0;
 				$sql=mysql_query("select * from survey");
@@ -232,11 +232,11 @@
 						if ($id[3]==4){
 							
 							if($say%3==0){
-								echo '<tr><td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim . '</td>'; 
+								echo '<tr><td>'.'<input type="image" value="Submit" src="img/edit.png"   name="edit"/">'.'<input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim . '</td>'; 
 								$say=0;
 							}
 						else
-							echo '<td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>'; 
+							echo '<td>'.'<input type="image" value="Submit" src="img/edit.png"   name="edit"/">'.'<input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>'; 
 					}
 				  
 				}
@@ -263,11 +263,11 @@
 						if ($id[3]==5){
 							
 							if($say%3==0){
-								echo '<tr><td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim . '</td>'; 
+								echo '<tr><td>'.'<input type="image" value="Submit" src="img/edit.png"   name="edit"/">'.'<input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim . '</td>'; 
 								$say=0;
 							}
 						else
-							echo '<td><input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>'; 
+							echo '<td>'.'<input type="image" value="Submit" src="img/edit.png"   name="edit"/">'.'<input name="tahlil[' . $id . ']" type="checkbox" value="' . $id . '" /> ' . $isim .'</td>'; 
 					}
 				  
 				}
