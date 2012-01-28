@@ -1,0 +1,25 @@
+.editableText {
+	min-height: 20px;
+}
+.editableText:hover {
+	outline: 1px dashed grey;
+}
+.editableToolbar:hover + * {
+	outline: 1px dashed grey;
+}
+.editableToolbar {
+}
+.editableToolbar a{
+    display: block;
+    width: 17px;
+    height: 30px;
+    float: left;
+    margin: 2px;
+}
+.editableToolbar .edit {	
+	background: url("img/edit.png");
+	position:absolute;top:25px;left:100px;
+}
+.editableToolbar .save {
+    background: url("img/save.png") ;
+}
