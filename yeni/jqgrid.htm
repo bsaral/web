@@ -80,6 +80,30 @@ jQuery("#list10_d").jqGrid({
 	multiselect: true,
 	caption:"Invoice Detail"
 }).navGrid('#pager10_d',{add:false,edit:false,del:false});
+
+
+
+
+jQuery("#list10_b").jqGrid({
+	height: 100,
+   	url:'subgrid2.php?q=1&id=0',
+	datatype: "json",
+   	colNames:['No','Item'],
+   	colModel:[
+   		{name:'num',index:'num', width:55},
+   		{name:'item',index:'item', width:180},
+   		
+   	],
+   	rowNum:5,
+   	rowList:[5,10,20],
+   	pager: '#pager10_b',
+   	sortname: 'item',
+    viewrecords: true,
+    sortorder: "asc",
+	multiselect: true,
+	caption:"Invoice Detail"
+}).navGrid('#pager10_e',{add:false,edit:false,del:false});
+
 jQuery("#ms1").click( function() {
 	var s;
 	s = jQuery("#list10_d").jqGrid('getGridParam','selarrrow');
@@ -97,6 +121,11 @@ Invoice Header
 Invoice Detail
 <table id="list10_d"></table>
 <div id="pager10_d"></div>
+<a href="javascript:void(0)" id="ms1">Get Selected id's</a>
+
+Invoice Detail2
+<table id="list10_b"></table>
+<div id="pager10_b"></div>
 <a href="javascript:void(0)" id="ms1">Get Selected id's</a>
 
 <table id="navgrid"></table>

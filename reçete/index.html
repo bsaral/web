@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="tr-TR">
+<head>
+<title>REÇETE</title>
+<link href="stil.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="all" href="jsDatePick.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jsDatePick.min.1.1.js"></script>
+<script type="text/javascript">
+        window.onload = function(){
+            new JsDatePick({
+                useMode:2,
+                target:"inputField"
+            });
+        };
+        function gizli(){
+            jQuery("div.gizli").toggle(100);
+        }
+    </script>
+
+<style>
+.gizli{display:none;}
+
+</style>
+</head>
+<body>
+
+<div id="genel">
+
+
+		<div id="genelform"> 
+			<section id="iletisimformu"> 
+			   <a href="#" onclick="gizli()">Tıkla Gözüksün</a>
+				<div class="gizli">
+				
+					
+				<img src= "resim/omu.jpg"> 
+				<form action="form.php" method="post" id="formum" > 
+				<div class="kolon">
+					<div class="tarih">
+				
+						  <input type="text" size="12" id="inputField" value="TARİH"  />
+				
+					</div>
+				</div>
+				
+				
+					<div class="kolon">
+						
+						<div class="sol"> 
+							<input type="text" name="isim" id="isim" value="HASTANIN ADI -SOYADI ?" class="onaylanma"
+							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='HASTANIN ADI -SOYADI ?' }" onchange="this.beenchanged = true;" /> 
+						</div> 
+						<div class="sag em"> 
+							
+							<input type="text" name="email" id="email" value="PROTOKOL NO ?" class="onaylanma email" 
+							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='PROTOKOL NO ?' }" onchange="this.beenchanged = true;"/> 
+							
+						</div> 
+					</div> 
+					<div class="kolon"> 
+						<div class="sol"> 
+							<input type="text" name="website" id="website" value="KURUM SİCİL NO ?" 
+							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='KURUM SİCİL NO ?' }" onchange="this.beenchanged = true;"/> 
+							<textarea name="konu" id="konu" onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='DR.DİP.NO. ADI SOYADI' }" onchange="this.beenchanged = true;">DR.DİP.NO. ADI SOYADI</textarea>
+							
+						</div> 
+						<div class="sag"> 
+							<input type="text" name="tetkit" id="tetkit" value="İSTENEN TETKİT VE FİLMLER" 
+							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='İSTENEN TETKİT VE FİLMLER' }" onchange="this.beenchanged = true;"/>  
+							<input type="text" name="teshis" id="teshis" value="TEŞHİS ?" 
+							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='TEŞHİS ?' }" onchange="this.beenchanged = true;"/>  
+						</div> 
+					</div> 
+					<div class="kolon"> 
+						<div class="gereksiz"> 
+							<textarea id="mesaj" name="mesaj"
+							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='GEREKLİ TEDAVİ,İLAÇ,PROTEZ VE İYİLEŞTİRME ARAÇLARI' }" onchange="this.beenchanged = true;">GEREKLİ TEDAVİ,İLAÇ,PROTEZ VE İYİLEŞTİRME ARAÇLARI</textarea> 
+						</div>
+						 
+						
+					</div> 
+					<div class="kolon">
+					<div class="sag">  
+							<input type="text" name="imza" id="imza" value="SAĞLIK KURUMU MÜHÜR,İMZA" 
+							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='SAĞLIK KURUMU MÜHÜR,İMZA' }" onchange="this.beenchanged = true;"/> 
+						</div> 
+						<div class="sag em"> 
+							
+							<input type="text" name="alıcı" id="alıcı" value="İLAÇLARI ALANIN AD-SOYAD" 
+							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='İLAÇLARI ALANIN AD-SOYAD' }" onchange="this.beenchanged = true;"/>  
+							
+						</div> 
+						</div>
+					</div>
+					
+				</form> 
+				
+				
+				
+				<script type="text/javascript"> 
+				
+					$(document).ready(function() {
+						
+						$.validator.addMethod("onaylama", function(value, element, param) {
+						  return this.optional(element) || value !== param;
+						}, "Lütfen boþluklarý doldurun!");
+						
+						$("#formum").validate({
+							rules: {
+								isim: {
+									required: true,
+									onaylama: "isminiz nedir?",
+									minlength: 3
+								},
+								email: {
+									required: true,
+									onaylama: "Email adresiniz?"
+								}
+							}
+						});
+						
+						$('#iletisimbutton').mouseover(function(){
+							$('#iletisimbutton').attr("src", 'resim/gonder2.png');
+						});
+						
+						$('#iletisimbutton').mouseleave(function(){
+							$('#iletisimbutton').attr("src", 'resim/gonder2.png');
+						});
+						
+						$('#iletisimbutton').mousedown(function(){
+							$('#iletisimbutton').attr("src", 'resim/gonder3.png');
+						});
+						
+						$('.kolon #isim').focus(function(){
+							if ($(this).val() == 'isminiz nedir?')
+							{
+								$(this).val('');
+							}
+							$(this).css('color', '#393939');
+						});
+						$('.kolon #email').focus(function(){
+							if ($(this).val() == 'Email adresiniz?')
+							{
+								$(this).val('');
+							}
+							$(this).css('color', '#393939');
+						});
+						$('.kolon #website').focus(function(){
+							if ($(this).val() == 'Web sitenizin ismi?')
+							{
+								$(this).val('');
+							}
+							$(this).css('color', '#393939');
+						});
+						$('.kolon #konu').focus(function(){
+							if ($(this).val() == 'Mesajınızın konusu?')
+							{
+								$(this).val('');
+							}
+							$(this).css('color', '#393939');
+						});
+						$('.kolon #mesaj').focus(function(){
+							if ($(this).val() == 'Buraya mesajınızı yazın...')
+							{
+								$(this).val('');
+							}
+							$(this).css('color', '#393939');
+						});
+						
+	
+						$('.kolon #isim').blur(function(){
+							if ($(this).val() == '')
+							{
+								$(this).val('isminiz nedir?');
+								$(this).css('color', '#000000');
+							}
+ 
+							$("#formum").valid();
+						});
+						
+						$('.kolon #email').blur(function(){
+							if ($(this).val() == '')
+							{
+								$(this).val('Email adresiniz?');
+								$(this).css('color', '#b2b2b2');
+							}
+ 
+							
+							$("#formum").valid();
+						});
+						$('.kolon #website').blur(function(){
+							if ($(this).val() == '')
+							{
+								$(this).val('Web sitenizin ismi?');
+								$(this).css('color', '#b2b2b2');
+							}
+						});
+						$('.kolon #konu').blur(function(){
+							if ($(this).val() == '')
+							{
+								$(this).val('Mesajýnýzýn konusu?');
+								$(this).css('color', '#b2b2b2');
+							}
+						});
+						$('.kolon #mesaj').blur(function(){
+							if ($(this).val() == '')
+							{
+								$(this).val('Buraya mesajýnýzý yazýnýz...');
+								$(this).css('color', '#b2b2b2');
+							}
+						});
+ 
+					});
+				</script> 
+				
+			</section> 
+
+</div>
+
+</body>
+</html>

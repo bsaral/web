@@ -20,7 +20,7 @@ mysql_select_db($database) or die("Error conecting to db.");
 
 switch ($examp) {
     case 1:
-		$result = mysql_query("SELECT COUNT(*) AS count FROM invlines WHERE id=".$id);
+		$result = mysql_query("SELECT COUNT(*) AS count FROM inv WHERE id=".$id);
 		$row = mysql_fetch_array($result,MYSQL_ASSOC);
 		$count = $row['count'];
 
@@ -32,7 +32,7 @@ switch ($examp) {
         if ($page > $total_pages) $page=$total_pages;
 		$start = $limit*$page - $limit; // do not put $limit*($page - 1)
 		if ($start<0) $start = 0;
-        $SQL = "SELECT num, item, qty, unit FROM invlines WHERE id=".$id." ORDER BY $sidx $sord LIMIT $start , $limit";
+        $SQL = "SELECT num, item FROM inv WHERE id=".$id." ORDER BY $sidx $sord LIMIT $start , $limit";
 		$result = mysql_query( $SQL ) or die("Couldnt execute query.".mysql_error());
         $responce->page = $page;
         $responce->total = $total_pages;
