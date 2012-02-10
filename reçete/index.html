@@ -31,7 +31,7 @@
 
 		<div id="genelform"> 
 			<section id="iletisimformu"> 
-			   <a href="#" onclick="gizli()">Tıkla Gözüksün</a>
+			   <a href="#" onclick="gizli()"><img src="resim/edit_page.png" align="right" id="resim"></a>
 				<div class="gizli">
 				
 					
@@ -89,131 +89,25 @@
 						<div class="sag em"> 
 							
 							<input type="text" name="alıcı" id="alıcı" value="İLAÇLARI ALANIN AD-SOYAD" 
-							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='İLAÇLARI ALANIN AD-SOYAD' }" onchange="this.beenchanged = true;"/>  
+							onfocus="if(this.beenchanged!=true){ this.value = ''}" onblur="if(this.beenchanged!=true) { this.value='İLAÇLARI ALANIN AD-SOYAD' }" onchange="this.beenchanged = true;"/>
 							
-						</div> 
+							
 						</div>
+						
+						 
+						</div>
+						
+						
+						<input type="image" value="submit" src="resim/gonder.png" id="gonder" align="right"/>
+						
+						
 					</div>
-					
+					  
 				</form> 
 				
 				
 				
-				<script type="text/javascript"> 
 				
-					$(document).ready(function() {
-						
-						$.validator.addMethod("onaylama", function(value, element, param) {
-						  return this.optional(element) || value !== param;
-						}, "Lütfen boþluklarý doldurun!");
-						
-						$("#formum").validate({
-							rules: {
-								isim: {
-									required: true,
-									onaylama: "isminiz nedir?",
-									minlength: 3
-								},
-								email: {
-									required: true,
-									onaylama: "Email adresiniz?"
-								}
-							}
-						});
-						
-						$('#iletisimbutton').mouseover(function(){
-							$('#iletisimbutton').attr("src", 'resim/gonder2.png');
-						});
-						
-						$('#iletisimbutton').mouseleave(function(){
-							$('#iletisimbutton').attr("src", 'resim/gonder2.png');
-						});
-						
-						$('#iletisimbutton').mousedown(function(){
-							$('#iletisimbutton').attr("src", 'resim/gonder3.png');
-						});
-						
-						$('.kolon #isim').focus(function(){
-							if ($(this).val() == 'isminiz nedir?')
-							{
-								$(this).val('');
-							}
-							$(this).css('color', '#393939');
-						});
-						$('.kolon #email').focus(function(){
-							if ($(this).val() == 'Email adresiniz?')
-							{
-								$(this).val('');
-							}
-							$(this).css('color', '#393939');
-						});
-						$('.kolon #website').focus(function(){
-							if ($(this).val() == 'Web sitenizin ismi?')
-							{
-								$(this).val('');
-							}
-							$(this).css('color', '#393939');
-						});
-						$('.kolon #konu').focus(function(){
-							if ($(this).val() == 'Mesajınızın konusu?')
-							{
-								$(this).val('');
-							}
-							$(this).css('color', '#393939');
-						});
-						$('.kolon #mesaj').focus(function(){
-							if ($(this).val() == 'Buraya mesajınızı yazın...')
-							{
-								$(this).val('');
-							}
-							$(this).css('color', '#393939');
-						});
-						
-	
-						$('.kolon #isim').blur(function(){
-							if ($(this).val() == '')
-							{
-								$(this).val('isminiz nedir?');
-								$(this).css('color', '#000000');
-							}
- 
-							$("#formum").valid();
-						});
-						
-						$('.kolon #email').blur(function(){
-							if ($(this).val() == '')
-							{
-								$(this).val('Email adresiniz?');
-								$(this).css('color', '#b2b2b2');
-							}
- 
-							
-							$("#formum").valid();
-						});
-						$('.kolon #website').blur(function(){
-							if ($(this).val() == '')
-							{
-								$(this).val('Web sitenizin ismi?');
-								$(this).css('color', '#b2b2b2');
-							}
-						});
-						$('.kolon #konu').blur(function(){
-							if ($(this).val() == '')
-							{
-								$(this).val('Mesajýnýzýn konusu?');
-								$(this).css('color', '#b2b2b2');
-							}
-						});
-						$('.kolon #mesaj').blur(function(){
-							if ($(this).val() == '')
-							{
-								$(this).val('Buraya mesajýnýzý yazýnýz...');
-								$(this).css('color', '#b2b2b2');
-							}
-						});
- 
-					});
-				</script> 
 				
 			</section> 
 
