@@ -1,0 +1,56 @@
+table.admin-info { font-size: 11px; width:300px; text-align: left; background:#fff; border:4px solid #eee; }
+table.admin-info th { font-weight:normal; padding:12px 15px; color:#222; }
+table.admin-info td {  font-size:11px;padding: 10px 15px; color: #669; border-top: 1px solid #e8edff; }
+table.admin-info tr:hover td { color: #339; background: #eff2ff; }
+
+
+
+/* ---------------------------------- dashboard ---------------------------------- */
+table.dashboard { font-size: 11px; width:300px; text-align: left; background:#fff; border:4px solid #eee; }
+table.dashboard tbody tr:nth-child(2n+1) td,
+table.dashboard tbody tr:nth-child(2n+1) th { background-color: #F9F9F9; }
+table.dashboard tbody tr:hover td, .dashboard tbody tr:hover th { background-color: #F5F5F5; }
+table.dashboard { border-collapse: collapse; font-size: 12px; margin-bottom: 18px; padding: 0; width: 100%; }
+table.dashboard th,
+table.dashboard td { line-height: 15px; padding: 10px 10px 9px; text-align: left; }
+table.dashboard th { font-weight: bold; padding-top: 9px; vertical-align: middle; width:200px; }
+table.dashboard td { border-top: 1px solid #DDDDDD; vertical-align: top; }
+table.dashboard tbody th { border-top: 1px solid #DDDDDD; vertical-align: top; }
+table.dashboard .stick {
+    background-color: #BFBFBF;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    font-size: 9.75px;
+    font-weight: bold;
+    padding: 1px 3px 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-left: 0px;
+    border:none;
+}
+table.dashboard .stick.important { background-color: #C43C35; }
+table.dashboard .stick.warning   { background-color: #F89406; }
+table.dashboard .stick.trivial   { background-color: #46A546; }
+table.dashboard .stick.notice    { background-color: #62CFFC; }
+table.dashboard .stick.zero      { background-color: #000000; }
+table.dashboard .shrink { white-space: nowrap; width: 1px; }
+/* -------------------------------- end dashboard -------------------------------- */
+
+
+
+
+
+.dt_example .ringroup,
+.dt_example .respass,
+.dt_example .preview,
+.dt_example .members,
+.dt_example .edit,
+.dt_example .delete  { float:left; text-indent: -9999px; width:24px; height:24px; margin-right:4px; border:none;}
+.dt_example .preview { background:url(/public/img/icon/24x24/search_business_user.png) no-repeat center; }
+.dt_example .members { background:url(/public/img/icon/24x24/female_male_users.png) no-repeat center; }
+.dt_example .edit    { background:url(/public/img/icon/24x24/edit.png) no-repeat center; }
+.dt_example .delete  { background:url(/public/img/icon/24x24/delete.png) no-repeat center; }
+.dt_example .respass { background:url(/public/img/icon/24x24/package_warning.png) no-repeat center; }
+.dt_example .ringroup { background:url(/public/img/icon/24x24/remove_business_user.png) no-repeat center; }
+
+
