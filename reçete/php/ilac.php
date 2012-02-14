@@ -20,7 +20,7 @@ $q = empty($_GET['q']) ? "" : $_GET['q'];
 mysql_connect("localhost", "sim", "12345") or die("Could not connect");
 mysql_select_db("sim") or die("Could not select database");
 
-$sql = "select * from drugs where name LIKE '%$q%' limit 0,5";
+$sql = "select * from teshis where name LIKE '%$q%' limit 0,5";
 $res = mysql_query($sql);
 
 $arr = array();
