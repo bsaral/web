@@ -6,6 +6,7 @@ $sql=mysql_query("select * from drugs");
 $sql_teshis=mysql_query("select * from teshis");
 
 /* veri alışı */
+$tarih=$_POST['tarih'];
 $ad=$_POST['isim'];
 $protokol=$_POST['email']; 
 $kurum=$_POST['website'];
@@ -48,7 +49,7 @@ $alici=$_POST['alıcı'];
 				<div class="kolon">
 					<div class="tarih">
 				
-						  <input type="text" size="12" id="inputField" value="TARİH"  />
+						  <input type="text"  id="takvim" disabled="disabled" value="<?php print $tarih;?>"  />
 				
 					</div>
 				</div>
