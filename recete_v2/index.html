@@ -1,0 +1,134 @@
+<html>
+<head>
+
+<title>RECETE_V2</title>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+<link rel="stylesheet" href="css/master.css" type="text/css" />
+<link rel="stylesheet" href="css/stil.css" type="text/css" />
+<link rel="stylesheet" href="css/takvim.css" type="text/css" />
+<link rel="stylesheet" href="css/base.css" type="text/css" />
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/takvim.js"></script>
+<script type="text/javascript" src="js/jquery.tokeninput.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $("#ilac").tokenInput("/php/ilac.php", {
+			theme: "facebook"
+		      });
+      $("#teshis").tokenInput("/php/token.php", {
+			theme: "facebook"
+		      });
+    hazirla();
+});
+</script>
+
+</head>
+
+<body style="background-color:white;">
+
+<div id="container">
+
+
+
+ <a class="modal" href="#">REÇETE GÖSTER</a>
+
+</div>
+
+<div id="contact">
+	<div id="close"></div>
+
+	
+	<p class="success">Thanks! Your message has been sent.</p>
+	
+
+  <div id="genel">
+  <div id="genelform">
+    <section id="iletisimformu">
+     
+	<img src= "images/omu.jpg">
+
+	<form action="#" method="post" id="formum" >
+	  <div class="kolon">
+	    <div class="tarih">
+	      <input type="text"  id="takvim" value="TARİH" name="tarih"  />
+	      <div id="goster" style="display:none;margin:0px 0 0 0;"></div>
+	    </div>
+	  </div>
+
+	  <div class="kolon">
+	    <div class="sol">
+	      <P class="yazi">HASTANIN ADI-SOYADI</P>
+	      <input type="text" name="isim" id="isim"  class="onaylanma"/>
+	    </div>
+
+	    <div class="sag em">
+	      <P class="yazi">PROTOKOL NO</P>
+	      <input type="text" name="protokol" id="protokol"  class="onaylanma
+	      email"  />
+	    </div>
+	  </div>
+
+	  <div class="kolon">
+	    <div class="sol">
+	      <P class="yazi">KURUM SİCİL NO</P>
+	      <input type="text" name="website" id="website" />
+	    </div>
+
+	    <div class ="sag">
+	      <P class="yazi">DR.DİP.NO ADI SOYADI</P>
+	      <textarea name="konu" id="konu" > </textarea>
+	    </div>
+
+	    <div class="sag">
+	      <P class="tetkik">İSTENEN TETKİK VE FİLMLER</P>
+	      <input type="text" name="tetkik" id="tetkik"/>
+
+	      <div class="tokenteshis">
+		 <P class="teshis">TEŞHİS</P>
+		<input type="text" name="teshis" id="teshis" />
+		
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="kolon">
+	    <div class="gereksiz">
+	      <div class="tokenilac">
+		<P class="yazi">GEREKLİ TEDAVİ,İLAÇ,PROTEZ VE İYİLEŞTİRME
+		ARAÇLARI</P>
+		<input type="text" id="ilac" name="ilac"/>
+	      </div>
+	   </div>
+	</div>
+
+	<div class="kolon">
+	  <div class="sag">
+	    <P class="yazi">SAĞLIK KURUMU MÜHÜR,İMZA</P>
+	    <input type="text" name="imza" id="imza" />
+	    </div>
+
+	    <div class="sag em">
+	      <P class="yazi">İLAÇLARI ALANIN AD-SOYAD</P>
+	      <input type="text" name="alıcı" id="alıcı" />
+	    </div>
+	  </div>
+
+	  <input type="image" value="submit" src="images/gonder.png"
+	  id="gonder" align="right" alt="REÇETE GÖSTER"/>
+	</div>
+      </form>
+    </section>
+  </div>
+</div>
+
+<div id="mask"></div>
+
+
+</body>
+</html>

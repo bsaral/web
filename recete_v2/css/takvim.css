@@ -1,0 +1,9 @@
+﻿*{padding:0;margin:0;}table{border-collapse:collapse;}
+body{padding:10px;cursor:default;background-color:#ccc}
+/*Takvimin Başlığı Ay ve Gün*//*tr*/
+.takvim_baslik{text-align:center;font-weight:bold;font-size:10pt;padding:1px 2px;font-family:tahoma;background-color:#147;color:#fff;border:solid 1px #fff;}
+/*Kısa Gün Adları*//*td*/
+.gun_adi{text-align:center;padding:2px 3px;font-weight:bold;font-size:10pt;font-family:Tahoma;background-color:#dcdcdc;border:solid 1px #fff;}
+/*Gün Numaraları*/
+.gun_no td{text-align:center;font-size:10pt;font-family:calibri;background-color:#eee;border:solid 1px #fff;}
+	.gun_no td:hover{background-color:#800;color:#fff;}
