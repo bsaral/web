@@ -18,10 +18,10 @@
 <script type="text/javascript" src="js/jquery.tokeninput.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-      $("#ilac").tokenInput("php/ilac.php", {
+      $("#ilac").tokenInput("php/get_drug.php", {
 			theme: "facebook"
 		      });
-      $("#teshis").tokenInput("php/token.php", {
+      $("#teshis").tokenInput("php/get_diagnose.php", {
 			theme: "facebook"
 		      });
     hazirla();
